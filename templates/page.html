@@ -10,6 +10,16 @@
     {{ page.title }}
 {% endblock title %}
 
+// FIXME this only supports up to one nested sections
+{% block navigation_path %}
+    <a href="/">home</a>
+    {% set path_first_component = page.components[0] ~ "/" %}
+    {% if path_first_component != page.path %}
+    > <a href="/{{ page.components[0] }}">{{ page.components[0] }}</a>
+    {% endif %}
+    > {{ page.title | default(value="blog") }}
+{% endblock navigation_path %}
+
 {% block content %}
     {% if not page.extra.no_header %}
         {% if page.date %}
