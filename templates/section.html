@@ -10,6 +10,8 @@
     {{ macros::title_or_last(component=section) }}
 {% endblock title %}
 
+{% block twittertitle %}{{ macros::title_or_last(component=section) | trim }}{% endblock twittertitle %}
+
 // FIXME this assumes there will always been exactly one nesting of sections
 {% block navigation_path %}
     <a href="/">home</a> > {{ macros::title_or_last(component=section) }}

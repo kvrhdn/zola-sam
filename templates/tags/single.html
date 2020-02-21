@@ -10,6 +10,9 @@
     #{{ term.name }}
 {% endblock title %}
 
+{% block twittertitle %}#{{ term.name }}{% endblock twittertitle %}
+{% block twitterdescription %}Posts tagged with #{{ term.name }}.{% endblock twitterdescription %}
+
 // FIXME this does not work with nested tags
 {% block navigation_path %}
     <a href="/">home</a> > <a href="/tags">tags</a> > {{ term.name }}

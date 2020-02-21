@@ -10,6 +10,9 @@
     {{ page.title }}
 {% endblock title %}
 
+{% block twittertitle %}{{ page.title }}{% endblock twittertitle %}
+{% block twitterdescription %}{{ page.summary }}{% endblock twitterdescription %}
+
 // FIXME this only supports up to one nested sections
 {% block navigation_path %}
     <a href="/">home</a>
