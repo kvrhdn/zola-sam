@@ -47,7 +47,7 @@
             <div class="tag-container">
                 {% for tag in page.taxonomies.tags %}
                     <span class="tag">
-                        <a href="{{ get_taxonomy_url(kind='tags', name=tag) }}">
+                        <a class="tag-link" href="{{ get_taxonomy_url(kind='tags', name=tag) }}">
                             #{{ tag }}
                         </a>
                     </span>
