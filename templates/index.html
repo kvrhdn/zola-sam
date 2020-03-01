@@ -21,6 +21,7 @@
         <meta name="twitter:creator" content="{{ config.extra.twitter_account }}" />
         <meta name="twitter:title" content="{% block twittertitle %}{{ config.title }}{% endblock twittertitle %}" />
         <meta name="twitter:description" content="{% block twitterdescription %}{{ config.description }}{% endblock twitterdescription %}" />
+        {% block twittercustom %}{% endblock twittercustom %}
         {% endif %}
 
         {% if config.generate_rss %}

@@ -12,6 +12,11 @@
 
 {% block twittertitle %}{{ page.title }}{% endblock twittertitle %}
 {% block twitterdescription %}{{ page.summary }}{% endblock twitterdescription %}
+{% block twittercustom %}
+    {% if page.extra.twitter_image %}
+        <meta name="twitter:image" content="{{ config.base_url }}{{ page.extra.twitter_image }}" />
+    {% endif %}
+{% endblock twittercustom %}
 
 // FIXME this only supports up to one nested sections
 {% block navigation_path %}
